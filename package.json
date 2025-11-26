@@ -1,0 +1,14 @@
+{
+  "name": "google-photos-backup",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "google-photos-backup.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "extract-zip": "^2.0.1"
+  }
+}
