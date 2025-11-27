@@ -78,7 +78,6 @@ async function moveContents(source, destination) {
   const entries = await fs.readdir(source, { withFileTypes: true });
 
   for (const entry of entries) {
-    // const sourcePath = path.join(source, entry.name);
     const sourcePath = path.join(source, entry.name);
     const destPath = path.join(destination, entry.name);
 
@@ -136,6 +135,9 @@ async function processZipFile(zipInfo, sourcePath, destPath) {
   } finally {
     // Clean up temporary directory
     await deleteItem(tempDir);
+
+    // Clean up ZIP file
+    await deleteItem(fullPath);
   }
 }
 
